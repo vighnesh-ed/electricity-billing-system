@@ -1,0 +1,16 @@
+Reponsive webpage for electricity billing in XAMPP and PHP with a form having the following fields
+Month Selection Dropdown, Name, Address(bigger input box), Mobile number, number of units, submit button
+
+Rates:
+50 units -> 3.50Rs/units
+100 units -> 4.00Rs/units
+250 units -> 5.20Rs/units
+Beyond 250 units-> 6.50Rs/units
+
+Rates are additive and not multiplicative. Eg if 150 units, first 50 will have 3.50 then the rest will have 4.00.
+
+Complementary, if possible make the bill printable in PDF format.
+
+1) Make the bill webpage
+2) MySQL Database to store these details
+3) Make Github repo 

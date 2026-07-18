@@ -1,0 +1,304 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#eef6ff,#dbeafe);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.container{
+    max-width:700px;
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    background:#ffffff;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card-header{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:22px;
+    border:none;
+}
+
+.card-header h2{
+    margin:0;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.card-body{
+    padding:35px;
+}
+
+.form-label,
+label{
+    font-weight:500;
+    color:#1e3a8a;
+    margin-bottom:8px;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    border:1px solid #cbd5e1;
+    padding:12px;
+    transition:all .3s ease;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.18);
+}
+
+textarea{
+    resize:none;
+}
+
+.btn{
+    border-radius:12px;
+    padding:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-success{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-2px);
+}
+
+.table{
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.table th{
+    background:#eff6ff;
+    color:#1e40af;
+    width:35%;
+}
+
+.table td{
+    background:white;
+}
+
+.table-warning{
+    background:#dbeafe !important;
+}
+
+.table-warning th,
+.table-warning td{
+    font-size:1.1rem;
+    color:#1e3a8a;
+}
+
+.text-center .btn{
+    margin:8px;
+    min-width:170px;
+}
+
+@media(max-width:768px){
+
+.card-body{
+    padding:20px;
+}
+
+.card-header h2{
+    font-size:1.5rem;
+}
+
+.text-center .btn{
+    width:100%;
+    margin:6px 0;
+}
+
+}
+
+/* ---------- BILL PAGE ---------- */
+
+.bill-paper{
+    background:#fff;
+    padding:22px;
+    border:2px solid #000;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.bill-header{
+    border-bottom:2px solid #000;
+    padding-bottom:12px;
+    margin-bottom:18px;
+}
+
+.bill-header h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+}
+
+.bill-header h5{
+    margin:4px 0;
+}
+
+.bill-info td{
+    font-size:14px;
+}
+
+.section-title{
+    background:#efefef;
+    border:1px solid #000;
+    padding:6px 10px;
+    margin:12px 0 0;
+    font-weight:bold;
+}
+
+.bill-paper table{
+    margin-bottom:12px;
+}
+
+.bill-paper table td,
+.bill-paper table th{
+    padding:6px;
+    vertical-align:middle;
+}
+
+.fake-qr{
+    width:90px;
+    height:90px;
+    border:2px solid #000;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.barcode{
+    font-family:monospace;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-top:20px;
+}
+
+.no-print{
+    margin-top:20px;
+}
+
+/* ---------- PRINT ---------- */
+
+@media print{
+
+    @page{
+        size:A4;
+        margin:5mm;
+    }
+
+    body{
+        background:white;
+        display:block;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        width:100%;
+        padding:0;
+        margin:0;
+    }
+
+    .bill-paper{
+        box-shadow:none;
+        border:none;
+        padding:5px;
+    }
+
+    .bill-paper table td,
+    .bill-paper table th{
+        padding:4px;
+        font-size:12px;
+    }
+
+    .bill-header h2{
+        font-size:20px;
+    }
+
+    .bill-header h5{
+        font-size:15px;
+    }
+
+    .section-title{
+        margin-top:6px;
+        padding:4px 8px;
+    }
+
+    .fake-qr{
+        width:70px;
+        height:70px;
+    }
+
+    .barcode{
+        font-size:13px;
+        margin-top:8px;
+    }
+
+    hr{
+        margin:8px 0;
+    }
+
+    p{
+        margin-bottom:6px;
+    }
+
+    .badge{
+        border:1px solid #000;
+        color:#000 !important;
+        background:white !important;
+    }
+
+    .no-print{
+        display:none;
+    }
+
+    table,
+    tr,
+    td,
+    th{
+        page-break-inside:avoid;
+    }
+
+}

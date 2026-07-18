@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# XAMPP logs
+*.log
+
+# Environment files
+.env
+
+notes.txt
